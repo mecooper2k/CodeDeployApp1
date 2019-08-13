@@ -2,7 +2,7 @@
 sudo apt-get update -y
 sudo apt-get install apache2 -y  
 sudo service apache2 start
-sudo chkconfig httpd on
+#sudo chkconfig httpd on
 #sudo groupadd www
 #sudo usermod -a -G www ec2-user
 #exit
