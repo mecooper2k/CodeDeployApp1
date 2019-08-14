@@ -4,6 +4,10 @@ files:
   - source: /index.html
     destination: /var/www/html/one/
 hooks:
+  BeforeInstall:
+    - location: scripts/remove_files.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: scripts/apache_install.sh
       timeout: 300
