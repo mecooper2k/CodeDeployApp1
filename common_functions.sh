@@ -19,7 +19,7 @@ TARGET_GROUP_LIST="Duplicate"
 
 # PORT defines which port the application is running at.
 # If PORT is not specified, the script will use the default port set in target groups
-PORT=""
+PORT="3000"
 
 # Under normal circumstances, you shouldn't need to change anything below this line.
 # -----------------------------------------------------------------------------
