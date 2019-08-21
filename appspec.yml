@@ -4,6 +4,10 @@ files:
   - source: /index.html
     destination: /var/www/html/
 hooks:
+  ApplicationStop:
+    - location: deregister_from_elb.sh
+      timeout: 180
+      runas: root
   BeforeInstall:
     - location: scripts/remove_files.sh
       timeout: 300
@@ -11,4 +15,7 @@ hooks:
   ApplicationStart:
     - location: scripts/apache_install.sh
       timeout: 300
+      runas: root
+    - location: register_with_elb.sh
+      timeout: 180
       runas: root
